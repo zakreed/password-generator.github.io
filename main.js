@@ -25,5 +25,7 @@ function generatePassword() {
     return password;
 }
 
-let output = document.getElementById('output');
-output.innerText = generatePassword();
+document.getElementById('generate').onclick = function () {
+    output.innerText = generatePassword();
+}
+
