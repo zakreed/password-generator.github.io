@@ -1,22 +1,23 @@
 const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
 const numbers = '0123456789';
+const spCharacters = '!@#$%^&*';
 
 function generatePassword() {
-    const includeLetters = document.getElementById('letters').checked;
-    const includeNumbers = document.getElementById('numbers').checked;
-    const includeSPChars = document.getElementById('spCharacters').checked;
+    let includeLetters = document.getElementById('letters').checked;
+    let includeNumbers = document.getElementById('numbers').checked;
+    let includeSPChars = document.getElementById('spCharacters').checked;
+    let possibleCharacters = '';
     let password = '';
 
-    if (includeLetters === true) {
-        for (let i = 0; i < 10; i++) {
-            password += letters.charAt(Math.floor(Math.random() * letters.length))
-        }
+    includeLetters && (possibleCharacters += letters);
+    includeNumbers && (possibleCharacters += numbers);
+    includeSPChars && (possibleCharacters += spCharacters);
+
+    for (let i = 0; i < 10; i++) {
+        password += possibleCharacters.charAt(Math.floor(Math.random() * possibleCharacters.length))
     }
     return password;
 }
 
-function main() {
-    console.log(generatePassword());
-}
-
-main();
+let output = document.getElementById('output');
+output.innerText = generatePassword();
