@@ -22,8 +22,15 @@ function generatePassword() {
     for (let i = 0; i < 10; i++) {
         password += possibleCharacters.charAt(Math.floor(Math.random() * possibleCharacters.length))
     }
-    return password;
+
+    if (password == '') {
+        return 'Please check at least one of the checkboxes below'
+    } else {
+        return password;
+    }
 }
+
+output.innerText = generatePassword();
 
 document.getElementById('generate').onclick = function () {
     output.innerText = generatePassword();
