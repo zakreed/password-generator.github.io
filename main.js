@@ -9,9 +9,15 @@ function generatePassword() {
     let possibleCharacters = '';
     let password = '';
 
-    includeLetters && (possibleCharacters += letters);
-    includeNumbers && (possibleCharacters += numbers);
-    includeSPChars && (possibleCharacters += spCharacters);
+    if (includeLetters) {
+        possibleCharacters += letters;
+    }
+    if (includeNumbers) {
+        possibleCharacters += numbers;
+    }
+    if (includeSPChars) {
+        possibleCharacters += spCharacters;
+    }
 
     for (let i = 0; i < 10; i++) {
         password += possibleCharacters.charAt(Math.floor(Math.random() * possibleCharacters.length))
