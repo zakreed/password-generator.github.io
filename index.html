@@ -10,25 +10,30 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-[#2B3E51]">
+<body class="bg-[#030328]">
     <div class="flex justify-center items-center flex-col w-screen h-screen">
-        <p id="output" class="text-[#ECF0F1] text-5xl pb-20"></p>
-        <div class="flex flex-col gap-4 w-96 h-60 bg-[#303A48] rounded-lg drop-shadow-lg p-8">
-            <div>
-                <label class="text-[#ECF0F1]">Letters</label>
-                <input type="checkbox" id="letters" checked>
-            </div>
-            <div>
-                <label class="text-[#ECF0F1]">Numbers</label>
-                <input type="checkbox" id="numbers" checked>
-            </div>
-            <div>
-                <label class="text-[#ECF0F1]">Special characters</label>
-                <input type="checkbox" id="spCharacters" checked>
-            </div>
-            <div class="grid p-4 basis-1 shrink-0 grow-0">
-                <button class="text-[#ECF0F1]" id="generate">Generate</button>
-            </div>
+        <p id="output" class="text-[#ececec] text-5xl pb-20"></p>
+        <div class="bg-[#190752] rounded-lg drop-shadow-lg p-8">
+            <label class="text-[#ececec]">Letters</label>
+            <input type="checkbox" id="letters" checked>
+            <br>
+            <br>
+            <label class="text-[#ececec]">Numbers</label>
+            <input type="checkbox" id="numbers" checked>
+            <br>
+            <br>
+            <label class="text-[#ececec]">Special characters</label>
+            <input type="checkbox" id="spCharacters" class="bg-red-100" checked>
+            <br>
+            <br>
+            <label class="text-[#ececec]">Length</label>
+            <input type="range" id="noCharacters" min="1" max="32" step="1" checked>
+            <br>
+
+            <br>
+
+            <button class="text-[#ececec] bg-[#4d139d] rounded-lg px-2 py-1 active:bg-[#7411a0]"
+                id="generate">Generate</button>
         </div>
     </div>
 </body>
