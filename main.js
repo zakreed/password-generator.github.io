@@ -6,6 +6,7 @@ function generatePassword() {
     let includeLetters = document.getElementById('letters').checked;
     let includeNumbers = document.getElementById('numbers').checked;
     let includeSPChars = document.getElementById('spCharacters').checked;
+    let passwordLength = document.getElementById('noCharacters').value;
     let possibleCharacters = '';
     let password = '';
 
@@ -19,7 +20,7 @@ function generatePassword() {
         possibleCharacters += spCharacters;
     }
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < passwordLength; i++) {
         password += possibleCharacters.charAt(Math.floor(Math.random() * possibleCharacters.length))
     }
 
