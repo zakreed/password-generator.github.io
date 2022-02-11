@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Password generator</title>
     <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-[#030328]">
+<body>
     <div class="flex justify-center items-center flex-col w-screen h-screen">
         <p id="output" class="text-[#ececec] text-5xl pb-20"></p>
         <div class="bg-[#190752] rounded-lg drop-shadow-lg p-8">
@@ -23,15 +24,13 @@
             <br>
             <br>
             <label class="text-[#ececec]">Special characters</label>
-            <input type="checkbox" id="spCharacters" class="bg-red-100" checked>
+            <input type="checkbox" id="spCharacters" checked>
             <br>
             <br>
             <label class="text-[#ececec]">Length</label>
             <input type="range" id="noCharacters" min="1" max="32" step="1" checked>
             <br>
-
             <br>
-
             <button class="text-[#ececec] bg-[#4d139d] rounded-lg px-2 py-1 active:bg-[#7411a0]"
                 id="generate">Generate</button>
         </div>
